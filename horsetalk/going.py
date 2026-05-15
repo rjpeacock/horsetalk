@@ -128,7 +128,8 @@ class Going:
             The parts of the description.
         """
         texts = (
-            self.description.upper()
+            self.description
+            .upper()
             .replace(" IN PLACES", "")
             .replace(" ON BENDS", "")
             .split(", ")
@@ -203,7 +204,8 @@ class Going:
         )
 
         normalised_description = (
-            description.lower()
+            description
+            .lower()
             .replace(")", "")
             .replace("(", ",")
             .replace("hurdles", "hurdle")
@@ -232,7 +234,8 @@ class Going:
             for i in identifiers:
                 x = x.replace(f"{i}", "").replace("  ", " ")
             return (
-                x.replace(" on", "")
+                x
+                .replace(" on", "")
                 .replace(" course", "")
                 .replace(" and", "")
                 .replace(":", "")

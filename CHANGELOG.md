@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.30.1 (2026-05-15)
+
+#### Fixes
+
+* support multiple AW pairings and triple course auto-detection in Going.multiparse
+
 ## 0.30.0 (2025-11-12)
 
 #### New Features

@@ -195,7 +195,8 @@ class Silks:
     def _clauses(self) -> list[list[str]]:
         clauses = [
             Silks._conjoin_words(clause.split(" "))
-            for clause in self.description.lower()
+            for clause in self.description
+            .lower()
             .replace("(", "")
             .replace(")", "")
             .replace(" on ", " ")
