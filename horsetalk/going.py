@@ -196,7 +196,9 @@ class Going:
                 ("old", "new"),
                 ("straight", "round"),
                 ("turf", "aw"),
-                ("flat", "nh"),
+                ("nh", "aw"),
+                ("nh", "flat"),
+                ("chase", "hurdle", "cross country"),
             )
         )
 
@@ -208,9 +210,12 @@ class Going:
             .replace("-", " ")
         )
 
-        if not any(
-            item in normalised_description for combo in combos for item in combo
-        ):
+        def match_count(combo):
+            return sum(1 for item in combo if item in normalised_description)
+
+        identifiers = max(combos, key=match_count)
+
+        if match_count(identifiers) == 0:
             return {"default": Going(description)}
 
         clauses = normalised_description.split(",")
@@ -222,12 +227,6 @@ class Going:
                 clauses[i - 1] = clauses[i - 1].strip() + ", " + clause
                 clauses[i] = ""
         clauses = [x for x in clauses if x]
-
-        identifiers = next(
-            combo
-            for combo in combos
-            if any(item in normalised_description for item in combo)
-        )
 
         def strip_clause(x):
             for i in identifiers:

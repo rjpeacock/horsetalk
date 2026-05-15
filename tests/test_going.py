@@ -215,6 +215,20 @@ def test_going_multiparse_when_split_is_turf_vs_all_weather():
     }
 
 
+def test_going_multiparse_when_split_is_national_hunt_vs_all_weather():
+    assert Going.multiparse("NH course Good to Firm, AW course Standard to Slow") == {
+        "nh": Going("Good to Firm"),
+        "aw": Going("Standard to Slow"),
+    }
+
+
+def test_going_multiparse_when_split_is_national_hunt_vs_flat():
+    assert Going.multiparse("NH course Good to Firm, Flat course Standard to Slow") == {
+        "nh": Going("Good to Firm"),
+        "flat": Going("Standard to Slow"),
+    }
+
+
 def test_going_multiparse_when_split_is_national_vs_mildmay():
     assert Going.multiparse(
         "Good to Firm, National course Good to Soft", courses=("mildmay", "national")
@@ -232,4 +246,14 @@ def test_going_multiparse_when_triple_courses_specified():
         "chase": Going("Heavy"),
         "hurdle": Going("Soft to Heavy"),
         "cross country": Going("Soft to Heavy"),
+    }
+
+
+def test_going_multiparse_when_triple_course_with_none_specified():
+    assert Going.multiparse(
+        "Soft, Cross-Country course Good to Soft (Soft in places)"
+    ) == {
+        "chase": Going("Soft"),
+        "hurdle": Going("Soft"),
+        "cross country": Going("Good to Soft, Soft in places"),
     }
