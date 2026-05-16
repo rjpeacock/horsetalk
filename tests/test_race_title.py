@@ -2,7 +2,7 @@ from horsetalk import (
     AgeCategory,
     Gender,
     HorseExperienceLevel,
-    JumpCategory,
+    Obstacle,
     RaceDesignation,
     RaceTitle,
 )
@@ -15,7 +15,7 @@ def test_race_title_parse_returns_dict():
 
 
 def test_race_title_parse_can_correctly_identify_jump_category_when_present():
-    expected = JumpCategory.HURDLE
+    expected = Obstacle.HURDLE
     actual = RaceTitle.parse("HAPPY NEW YEAR NOVICES HURDLE (4)")["jump_category"]
     assert expected == actual
 
@@ -27,7 +27,7 @@ def test_race_title_parse_can_correctly_identify_jump_category_when_not_present(
 
 
 def test_race_title_parse_can_correctly_identify_jump_category_when_cross_country():
-    expected = JumpCategory.CROSS_COUNTRY
+    expected = Obstacle.CROSS_COUNTRY
     actual = RaceTitle.parse("CROSS COUNTRY HANDICAP CHASE (5)")["jump_category"]
     assert expected == actual
 
