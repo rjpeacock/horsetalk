@@ -1,6 +1,11 @@
 from horsetalk import Obstacle
 
 
+def test_obstacle_can_be_created_from_none():
+    assert Obstacle.NONE == Obstacle(0)
+    assert Obstacle["NONE"] == Obstacle.NONE
+
+
 def test_obstacle_can_be_created_from_enum():
     assert Obstacle(1) == Obstacle.HURDLE
 

@@ -7,9 +7,13 @@ class Obstacle(ParsingEnum):
 
     """
 
+    NONE = 0
     HURDLE = 1
     STEEPLECHASE = 2
     CROSS_COUNTRY = 3
+
+    # Aliases
+    FLAT = NONE
 
     # Abbreviations
     H = HURDLE
