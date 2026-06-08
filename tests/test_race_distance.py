@@ -70,15 +70,15 @@ def test_race_distance_can_be_initialised_with_mile_furlong_and_yard_spaced_stri
 
 
 def test_race_distance_can_be_initialised_with_metres_string():
-    assert RaceDistance("1609m").km == 1.609
+    assert RaceDistance("1609m").km == pytest.approx(1.609)
 
 
 def test_race_distance_can_be_initialised_with_metres_string_with_comma():
-    assert RaceDistance("1,609m").km == 1.609
+    assert RaceDistance("1,609m").km == pytest.approx(1.609)
 
 
 def test_race_distance_can_be_initialised_with_standard_input():
-    assert RaceDistance(km=1.609).km == 1.609
+    assert RaceDistance(km=1.609).km == pytest.approx(1.609)
 
 
 def test_race_distance_init_errors_if_invalid_string():
