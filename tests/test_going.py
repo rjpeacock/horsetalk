@@ -20,7 +20,7 @@ def test_going_init_sets_reading_on_default():
 
 
 def test_going_init_sets_reading_when_given():
-    assert Going("Good", 7.0).reading == 7.0
+    assert Going("Good", 7.0).reading == pytest.approx(7.0)
 
 
 def test_going_init_throws_error_when_description_is_invalid():
@@ -162,7 +162,7 @@ def test_going_value_returns_primary_value_when_only_primary_given():
 
 
 def test_going_value_returns_mean_of_primary_and_secondary_values_when_both_given():
-    assert Going("Good, Good to Soft in places").value == 7.5
+    assert Going("Good, Good to Soft in places").value == pytest.approx(7.5)
 
 
 def test_going_multiparse_with_single_going():
