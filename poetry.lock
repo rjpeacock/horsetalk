@@ -2749,14 +2749,14 @@ files = [
 
 [[package]]
 name = "skylos"
-version = "4.23.1"
-description = "Open-source, local-first static analysis and PR gates for Python, TypeScript/JavaScript, Go, Java, PHP, Rust, Dart, C#, and Shell. Finds dead code, security issues, secrets, quality regressions, and AI-code mistakes."
+version = "4.24.1"
+description = "Open-source, local-first static analysis and PR gates for Python, TypeScript/JavaScript, Go, Java, Kotlin, PHP, Rust, Dart, C#, and Shell. Finds dead code, security issues, secrets, quality regressions, and AI-code mistakes."
 optional = false
 python-versions = ">=3.10"
 groups = ["dev"]
 files = [
-    {file = "skylos-4.23.1-py3-none-any.whl", hash = "sha256:6ffefa2dddeb2cae0597c7b9ab191e573c1739d49a33cf36c394a4fe57946fc5"},
-    {file = "skylos-4.23.1.tar.gz", hash = "sha256:2102b790de750023c3cb5aec268b3f0315401506061a6c4cfd7f25a689e3e37c"},
+    {file = "skylos-4.24.1-py3-none-any.whl", hash = "sha256:d2cfe487e953deecd0b60d84f8109b00ffd2fafe1322915767e9240b1007f061"},
+    {file = "skylos-4.24.1.tar.gz", hash = "sha256:0ace34f8ec797265c6b2afbea3d652a9aadabbf31d12ead29bc7974fcd958e1f"},
 ]
 
 [package.dependencies]
@@ -2780,8 +2780,8 @@ tree-sitter-rust = ">=0.24.2"
 tree-sitter-typescript = ">=0.23.2"
 
 [package.extras]
-all = ["flask (>=2.1.1)", "flask-cors (>=3.0.3)", "litellm (>=1.83.14,<1.84.0)", "pytest (>=9.0.2)"]
-llm = ["litellm (>=1.83.14,<1.84.0)"]
+all = ["aiohttp (>=3.14.0)", "flask (>=2.1.1)", "flask-cors (>=3.0.3)", "litellm (>=1.84.0,<1.85.0)", "pytest (>=9.0.2)"]
+llm = ["aiohttp (>=3.14.0)", "litellm (>=1.84.0,<1.85.0)"]
 test = ["pytest (>=9.0.2)"]
 web = ["flask (>=2.1.1)", "flask-cors (>=3.0.3)"]
 
