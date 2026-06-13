@@ -2,7 +2,7 @@ from horsetalk import Obstacle
 
 
 def test_obstacle_can_be_created_from_none():
-    assert Obstacle.NONE == Obstacle(0)
+    assert Obstacle(0) == Obstacle.NONE
     assert Obstacle["NONE"] == Obstacle.NONE
 
 
