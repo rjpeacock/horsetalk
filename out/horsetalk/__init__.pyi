@@ -21,7 +21,7 @@ from .horse_experience_level import HorseExperienceLevel as HorseExperienceLevel
 from .horse_height import HorseHeight as HorseHeight
 from .horselength import Horselength as Horselength
 from .jockey_experience_level import JockeyExperienceLevel as JockeyExperienceLevel
-from .jump_category import JumpCategory as JumpCategory
+from .obstacle import Obstacle as Obstacle
 from .obstacle_style import ObstacleStyle as ObstacleStyle
 from .outcome import Outcome as Outcome
 from .race_class import RaceClass as RaceClass
@@ -45,4 +45,4 @@ from .stalls_position import StallsPosition as StallsPosition
 from .surface import Surface as Surface
 from .turf_going_description import TurfGoingDescription as TurfGoingDescription
 
-__all__ = ['AWGoingDescription', 'AgeCategory', 'AgeRestriction', 'Breed', 'CoatColour', 'Country', 'DirtGoingDescription', 'Disaster', 'Draw', 'FinishingPosition', 'FormBreak', 'FormFigures', 'Gender', 'Going', 'Handedness', 'Headgear', 'Hemisphere', 'Horse', 'HorseAge', 'HorseExperienceLevel', 'HorseHeight', 'Horselength', 'JockeyExperienceLevel', 'JumpCategory', 'ObstacleStyle', 'Outcome', 'RaceClass', 'RaceConditions', 'RaceDesignation', 'RaceDistance', 'RaceDistanceCategory', 'RaceGrade', 'RaceLevel', 'RacePerformance', 'RaceTitle', 'RaceWeight', 'Racecourse', 'RacecourseContour', 'RacecourseShape', 'RacecourseStyle', 'RacingCode', 'Sex', 'Silks', 'StallsPosition', 'Surface', 'TurfGoingDescription']
+__all__ = ['AWGoingDescription', 'AgeCategory', 'AgeRestriction', 'Breed', 'CoatColour', 'Country', 'DirtGoingDescription', 'Disaster', 'Draw', 'FinishingPosition', 'FormBreak', 'FormFigures', 'Gender', 'Going', 'Handedness', 'Headgear', 'Hemisphere', 'Horse', 'HorseAge', 'HorseExperienceLevel', 'HorseHeight', 'Horselength', 'JockeyExperienceLevel', 'Obstacle', 'ObstacleStyle', 'Outcome', 'RaceClass', 'RaceConditions', 'RaceDesignation', 'RaceDistance', 'RaceDistanceCategory', 'RaceGrade', 'RaceLevel', 'RacePerformance', 'RaceTitle', 'RaceWeight', 'Racecourse', 'RacecourseContour', 'RacecourseShape', 'RacecourseStyle', 'RacingCode', 'Sex', 'Silks', 'StallsPosition', 'Surface', 'TurfGoingDescription']

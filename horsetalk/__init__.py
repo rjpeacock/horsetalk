@@ -21,7 +21,7 @@ from .horse_experience_level import HorseExperienceLevel
 from .horse_height import HorseHeight
 from .horselength import Horselength
 from .jockey_experience_level import JockeyExperienceLevel
-from .jump_category import JumpCategory
+from .obstacle import Obstacle
 from .obstacle_style import ObstacleStyle
 from .outcome import Outcome
 from .race_class import RaceClass
@@ -69,7 +69,7 @@ __all__ = [
     "HorseHeight",
     "Horselength",
     "JockeyExperienceLevel",
-    "JumpCategory",
+    "Obstacle",
     "ObstacleStyle",
     "Outcome",
     "RaceClass",
@@ -93,3 +93,17 @@ __all__ = [
     "Surface",
     "TurfGoingDescription",
 ]
+
+
+def __getattr__(name):
+    if name == "JumpCategory":
+        import warnings
+
+        warnings.warn(
+            "JumpCategory is deprecated, use Obstacle instead. "
+            "JumpCategory will be removed in v1.0.0.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+        return Obstacle
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")

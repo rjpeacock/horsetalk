@@ -4,7 +4,7 @@ from itertools import pairwise
 from .age_category import AgeCategory
 from .gender import Gender
 from .horse_experience_level import HorseExperienceLevel
-from .jump_category import JumpCategory
+from .obstacle import Obstacle
 from .race_designation import RaceDesignation
 
 
@@ -35,7 +35,7 @@ class RaceTitle:
             AgeCategory,
             HorseExperienceLevel,
             Gender,
-            JumpCategory,
+            Obstacle,
             RaceDesignation,
         ]
         end_index = -1
@@ -49,7 +49,7 @@ class RaceTitle:
             "age_category": cls._lookup(AgeCategory, words),
             "horse_experience_level": cls._lookup(HorseExperienceLevel, words),
             "gender": cls._lookup(Gender, words, allow_multiple=True),
-            "jump_category": cls._lookup(JumpCategory, words),
+            "jump_category": cls._lookup(Obstacle, words),
             "race_designation": cls._lookup(
                 RaceDesignation, words, allow_multiple=True
             ),
