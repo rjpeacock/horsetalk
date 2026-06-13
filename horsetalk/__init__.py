@@ -69,7 +69,6 @@ __all__ = [
     "HorseHeight",
     "Horselength",
     "JockeyExperienceLevel",
-    "JumpCategory",
     "Obstacle",
     "ObstacleStyle",
     "Outcome",
