@@ -2127,14 +2127,14 @@ files = [
 
 [[package]]
 name = "pytest"
-version = "9.0.3"
+version = "9.1.0"
 description = "pytest: simple powerful testing with Python"
 optional = false
 python-versions = ">=3.10"
 groups = ["dev"]
 files = [
-    {file = "pytest-9.0.3-py3-none-any.whl", hash = "sha256:2c5efc453d45394fdd706ade797c0a81091eccd1d6e4bccfcd476e2b8e0ab5d9"},
-    {file = "pytest-9.0.3.tar.gz", hash = "sha256:b86ada508af81d19edeb213c681b1d48246c1a91d304c6c81a427674c17eb91c"},
+    {file = "pytest-9.1.0-py3-none-any.whl", hash = "sha256:8ebb0e7888bdf2bdfc602ec51f8f62d50200af37356c74e503c79a94f5c81f32"},
+    {file = "pytest-9.1.0.tar.gz", hash = "sha256:41dd9148c08072446394cefd3d79701701335a9f4cae69ba92e39f6c7f5c061c"},
 ]
 
 [package.dependencies]
@@ -2749,14 +2749,14 @@ files = [
 
 [[package]]
 name = "skylos"
-version = "4.24.1"
+version = "4.24.2"
 description = "Open-source, local-first static analysis and PR gates for Python, TypeScript/JavaScript, Go, Java, Kotlin, PHP, Rust, Dart, C#, and Shell. Finds dead code, security issues, secrets, quality regressions, and AI-code mistakes."
 optional = false
 python-versions = ">=3.10"
 groups = ["dev"]
 files = [
-    {file = "skylos-4.24.1-py3-none-any.whl", hash = "sha256:d2cfe487e953deecd0b60d84f8109b00ffd2fafe1322915767e9240b1007f061"},
-    {file = "skylos-4.24.1.tar.gz", hash = "sha256:0ace34f8ec797265c6b2afbea3d652a9aadabbf31d12ead29bc7974fcd958e1f"},
+    {file = "skylos-4.24.2-py3-none-any.whl", hash = "sha256:b8bf4fa06afe3aba8f509bb29cdeddd9b195acc9e24aae2b5820024b65c46f62"},
+    {file = "skylos-4.24.2.tar.gz", hash = "sha256:041795a4736f48685b421050b555bfbf457eff93811b01e62cd89461f31e6777"},
 ]
 
 [package.dependencies]
